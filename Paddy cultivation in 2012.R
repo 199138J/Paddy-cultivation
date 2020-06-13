@@ -1,0 +1,7 @@
+library(readxl)
+seasons <- read_excel("C:/Users/Shakya/Desktop/data/seasons.xlsx")
+barplot(seasons$SownAcres, ylab="Area in Acres", names.arg = c("Maha","Yala"), cex.main = 0.75)
+barplot(seasons$HarvestedAcres, ylab="Harvested Area in Acres", names.arg = c("Maha","Yala"), cex.main = 0.75)
+barplot(seasons$AverageYield, ylab="Average Yield Bushels/Acre", names.arg = c("Maha","Yala"), cex.main = 0.75)
+barplot(seasons$Production, ylab="Production in Bushels", names.arg = c("Maha","Yala"), cex.main = 0.75)
+pie(seasons$`Production Percentage`,seasons$seasons, main = "Paddy Production", col = rainbow(length(seasons$`Production Percentage`)))
